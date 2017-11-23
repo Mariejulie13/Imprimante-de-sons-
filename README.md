@@ -1,5 +1,6 @@
 # Imprimante-de-sons-
 Projet étudiant
+
 *Un photos-boots des voix, un rendu visuel du son.*
 
 L'utilisateur parle dans le micro, une capsule de papier absorbe 4 couleurs d’encres selon l’intonation de cet utilisateur et créait ainsi un motif unique (correspondant à sa voix).
