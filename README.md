@@ -36,5 +36,5 @@ Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fr�
 # Montage
 
 # Schéma Arduino
-![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2.jpg)
+![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2_servo_bb.jpg)
 
