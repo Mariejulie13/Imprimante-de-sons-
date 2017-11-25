@@ -1,4 +1,4 @@
-## Imprimante-de-sons-
+## Imprimante-de-sons
 
 ![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2.jpg)
 
@@ -40,7 +40,7 @@ Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fr�
 ### 3. Lier l'arduino à processing
 
 # Le montage
-![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2.jpg)
+![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/3.jpg)
 
 ## Schéma Arduino
 ![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2_servo_bb.jpg)
