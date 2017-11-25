@@ -16,6 +16,7 @@ L’utilisateur prononce dans le micro la phrase qui s’affiche à l’écran. 
 
 ## LE TEXTE
 Le texte est généré aléatoirement sur l’écran. Ce sont des phrases de la poésie française avec des mots qui peuvent paraître particuliers.
+
 *Un gros matou roux qu’ils avaient
 d’abord appelé Leroux, puis Gaston,
 puis Chéribibi, en enfin en ultime
