@@ -20,7 +20,7 @@ Le texte est généré aléatoirement sur l’écran. Ce sont des phrases de la 
 *Un gros matou roux qu’ils avaient
 d’abord appelé Leroux, puis Gaston,
 puis Chéribibi, en enfin en ultime
-aphérèse, Ribibi. *
+aphérèse, Ribibi.*
 
 
 ## LE RENDU
