@@ -36,6 +36,42 @@ Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fr�
 ## Analyse du son 
 
 ### 1. Diviser le son en 4 types de fréquences 
+```
+ // Groupe 1
+  for (int numeroBande = 0; numeroBande < nbrBande; numeroBande += 1)
+  {
+    totalAmplitude += input.left.get(numeroBande)*50;
+  }
+  float moyenneAmplitude1 = totalAmplitude/nbrBande;
+
+  // Groupe 2
+  totalAmplitude = 0;
+  for (int numeroBande = nbrBande; numeroBande < 2*nbrBande; numeroBande += 1)
+  {
+    totalAmplitude += input.left.get(numeroBande)*50;
+  }
+  float moyenneAmplitude2 = totalAmplitude/nbrBande;
+  moyenneAmplitude2 = moyenneAmplitude2 * 4;
+
+  // Groupe 3
+  totalAmplitude = 0;
+  for (int numeroBande = 2*nbrBande; numeroBande < 3*nbrBande; numeroBande += 1)
+  {
+    totalAmplitude += input.left.get(numeroBande)*50;
+  }
+  float moyenneAmplitude3 = totalAmplitude/nbrBande;
+  moyenneAmplitude3 = moyenneAmplitude3 * 8;
+
+  // Groupe 4
+  totalAmplitude = 0;
+  for (int numeroBande = 3*nbrBande; numeroBande < 4*nbrBande; numeroBande += 1)
+  {
+    totalAmplitude += input.left.get(numeroBande)*50;
+  }
+  float moyenneAmplitude4 = totalAmplitude/nbrBande;
+  moyenneAmplitude4 = moyenneAmplitude4 * 16;
+```
+
 ### 2. Demander à l'arduino de réagir selon une donné (la fréquence) 
 ### 3. Lier l'arduino à processing
 
