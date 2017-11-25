@@ -1,7 +1,7 @@
 # Imprimante-de-sons-
 Projet étudiant
 
-! [] (assets/1.jpg)
+![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2.jpg)
 
 *Un photos-boots des voix, un rendu visuel du son.*
 
@@ -36,4 +36,5 @@ Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fr�
 # Montage
 
 # Schéma Arduino
+![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2.jpg)
 
