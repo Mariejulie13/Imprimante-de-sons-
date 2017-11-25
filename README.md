@@ -1,5 +1,4 @@
-# Imprimante-de-sons-
-Projet étudiant
+## Imprimante-de-sons-
 
 ![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2.jpg)
 
@@ -9,12 +8,12 @@ L'utilisateur parle dans le micro, une capsule de papier absorbe 4 couleurs d’
 
 Son : lien avec les conférences, les speakers, la parole et donc les différents types de voix. Chaque intonation de voix est différente ; la conférence accueillant des venues du monde entier, il pourrait être intéressant de faire prononcer aux utilisateurs des phrases incongrues de la poésie française. Une capsule de papier sur lequel serait déversée de l’encre selon l’intonation de la voix serait remit à l’utilisateur, comme un «diplôme». 
 
-# Le dispositif
+## Le dispositif
 
-## LE MICRO
+# LE MICRO
 L’utilisateur prononce dans le micro la phrase qui s’affiche à l’écran. Le son est analysé et divisé en quatre types de fréquences.
 
-## LE TEXTE
+# LE TEXTE
 Le texte est généré aléatoirement sur l’écran. Ce sont des phrases de la poésie française avec des mots qui peuvent paraître particuliers.
 
 *Un gros matou roux qu’ils avaient
@@ -23,10 +22,10 @@ puis Chéribibi, en enfin en ultime
 aphérèse, Ribibi.*
 
 
-## LE RENDU
+# LE RENDU
 Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fréquence est atteinte, la pipette d’encre lui correspondant effectue une rotation et déverse de l’encre sur une capsule de papier absorbant. Un motif particulier se créer ainsi sur chaque capsuler de papier selon l’intonation de l’utilisateur.
 
-# Matériel requis  & software requis
+## Matériel & software requis
 
 * Processing 
 * Arduino 
@@ -34,8 +33,15 @@ Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fr�
 * Scotch
 * Papier absorbant
 
-# Montage
+## Analyse du son 
 
-# Schéma Arduino
+### 1. Diviser le son en 4 types de fréquences 
+### 2. Demander à l'arduino de réagir selon une donné (la fréquence) 
+### 3. Lier l'arduino à processing
+
+# Le montage
+![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2.jpg)
+
+## Schéma Arduino
 ![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2_servo_bb.jpg)
 
