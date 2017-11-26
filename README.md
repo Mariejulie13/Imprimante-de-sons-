@@ -8,7 +8,7 @@ The user speaks in the microphone, a paper absorbs 4 colors of ink according to 
 
 Sounds: link with conferences, speakers, speech and therefore different types of voice. Each voice intonation is different; the conference welcomes guests from around the world, it might be interesting to have users pronounce incongruous sentences of French poetry. A capsule of paper on which ink would be poured according to the intonation of the voice would be given to the user like a "diploma".
 
-## Le dispositif
+## The device
 
 # THE MICRO
 The user pronounces in the microphone the sentence that appears on the screen. The sound is analyzed and divided into four types of frequencies.
@@ -67,7 +67,7 @@ void draw(){
 
 # RENDERING 
 
-Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fréquence est atteinte, la pipette d’encre lui correspondant effectue une rotation et déverse de l’encre sur une capsule de papier absorbant. Un motif particulier se créer ainsi sur chaque capsuler de papier selon l’intonation de l’utilisateur.
+The 4 types of frequencies analyzed correspond to the 4 inks. When the frequency is reached, the corresponding ink pipette rotates and pours ink onto a paper. A particular pattern is created on each paper according to the intonation of the user.
 
 ## Hardware & software required
 
