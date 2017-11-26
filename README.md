@@ -36,6 +36,9 @@ Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fr�
 ## Analyse du son 
 
 ### 1. Diviser le son en 4 types de fréquences 
+
+Il faut diviser le son en 4 types de fréquence afin de récupérer 4 données qui activeront les 4 servomoteur
+
 ```
  // Groupe 1
   for (int numeroBande = 0; numeroBande < nbrBande; numeroBande += 1)
@@ -72,8 +75,37 @@ Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fr�
   moyenneAmplitude4 = moyenneAmplitude4 * 16;
 ```
 
-### 2. Demander à l'arduino de réagir selon une donné (la fréquence) 
-### 3. Lier l'arduino à processing
+Faire de ces résultats des données exploitable par l'arduino
+
+```
+  myPort.write("a"+angleAmp1+"\n");
+  myPort.write("b"+angleAmp2+"\n");
+
+```
+
+### 2. Définir un angle sur lequel les servo pourront s'actionner 
+
+```
+ int angleAmp1 = int(map(moyenneAmplitude1, 0, 2, 0, 90));
+  int angleAmp2 = int(map(moyenneAmplitude2, 0, 1, 0, 90));
+ ```
+### 3. Lier l'arduino à processing et inversement
+
+Processing : 
+
+```
+  void serialEvent(Serial p) {
+  String message = myPort.readStringUntil(13);
+  if (message != null) 
+```
+  
+  Arduino : 
+  
+  ```
+    if (Serial.available()) {
+    val = Serial.read();
+    val = int(val);
+  ```
 
 # Le montage
 ![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/3.jpg)
