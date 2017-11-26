@@ -1,43 +1,87 @@
-## Imprimante-de-sons
+## Printer-of-sound
 
 ![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2.jpg)
 
-*Un photos-boots des voix, un rendu visuel du son.*
+*A photos-boots of voice, a visual rendering of the sound.*
 
-L'utilisateur parle dans le micro, une capsule de papier absorbe 4 couleurs d’encres selon l’intonation de cet utilisateur et créait ainsi un motif unique (correspondant à sa voix).
+The user speaks in the microphone, a paper absorbs 4 colors of ink according to the intonation of this user and thus creates a unique pattern (corresponding to his voice).
 
-Son : lien avec les conférences, les speakers, la parole et donc les différents types de voix. Chaque intonation de voix est différente ; la conférence accueillant des venues du monde entier, il pourrait être intéressant de faire prononcer aux utilisateurs des phrases incongrues de la poésie française. Une capsule de papier sur lequel serait déversée de l’encre selon l’intonation de la voix serait remit à l’utilisateur, comme un «diplôme». 
+Sounds: link with conferences, speakers, speech and therefore different types of voice. Each voice intonation is different; the conference welcomes guests from around the world, it might be interesting to have users pronounce incongruous sentences of French poetry. A capsule of paper on which ink would be poured according to the intonation of the voice would be given to the user like a "diploma".
 
 ## Le dispositif
 
-# LE MICRO
-L’utilisateur prononce dans le micro la phrase qui s’affiche à l’écran. Le son est analysé et divisé en quatre types de fréquences.
+# THE MICRO
+The user pronounces in the microphone the sentence that appears on the screen. The sound is analyzed and divided into four types of frequencies.
 
-# LE TEXTE
-Le texte est généré aléatoirement sur l’écran. Ce sont des phrases de la poésie française avec des mots qui peuvent paraître particuliers.
+# THE TEXTE
+The text is generated randomly on the screen. These are sentences of French poetry with words that may seem special.
 
 *Un gros matou roux qu’ils avaient
 d’abord appelé Leroux, puis Gaston,
 puis Chéribibi, en enfin en ultime
 aphérèse, Ribibi.*
 
+Example :
 
-# LE RENDU
+```
+String[] sujets = {
+ "Le pape", "Ma mere", "Ton père","Ton meilleur ami","Le type à côté de toi","Ton voisin", "Le monde", "La mer" };
+String[] verbes = {
+ "est","","n'est plus","devient", "semble","a cessé d'être","sera demain","trouvera" };
+String[] complements = {
+ "un chic type","hostile","ton meilleur ami","ton seul choix","ta seule famille","la mort","une feuille","un logiciel" };
+PFont mapolice;
+
+void setup(){
+ size(700,200);
+ // declarer la police 
+ mapolice = loadFont("DIN-Light-48.vlw"); 
+ textFont(mapolice,24);
+ textAlign(CENTER);
+ smooth();
+ fill(255);
+}
+
+void draw(){
+ background(0);
+ // choisir un sujet
+ float alea=random(0,sujets.length);
+ int lesujet=int(alea);
+
+ // choisir un verbe
+ alea=random(0,verbes.length);
+ int leverbe=int(alea);
+
+ // choisir un verbe
+ alea=random(0,complements.length);
+ int lecomplement=int(alea);
+ 
+ // assembler le tout et afficher
+ String lasentence=sujets[lesujet] + " " + verbes[leverbe] + " " + complements[lecomplement];
+ text(lasentence, width/2, 100); 
+ 
+ // une pause pour lire la phrase
+ delay(3000);
+}
+```
+
+# RENDERING 
+
 Les 4 types de fréquences analysées correspondent aux 4 encres. Lorsque la fréquence est atteinte, la pipette d’encre lui correspondant effectue une rotation et déverse de l’encre sur une capsule de papier absorbant. Un motif particulier se créer ainsi sur chaque capsuler de papier selon l’intonation de l’utilisateur.
 
-## Matériel & software requis
+## Hardware & software required
 
 * Processing 
 * Arduino 
-* 2 servomoteurs / Tige rigide / pipettes / encres 
+* 2 servomoteurs / Rigid stem / pipettes / Inks 
 * Scotch
-* Papier absorbant
+* Absorbent paper
 
-## Analyse du son 
+## Sound Analysis
 
-### 1. Diviser le son en 4 types de fréquences 
+### 1.Divide the sound into 4 types of frequencies
 
-Il faut diviser le son en 4 types de fréquence afin de récupérer 4 données qui activeront les 4 servomoteur
+We must divide the sound into 4 types of frequency in order to recover 4 data that will activate the 4 servomotors
 
 ```
  // Groupe 1
@@ -75,7 +119,7 @@ Il faut diviser le son en 4 types de fréquence afin de récupérer 4 données q
   moyenneAmplitude4 = moyenneAmplitude4 * 16;
 ```
 
-Faire de ces résultats des données exploitable par l'arduino
+Make these results data usable by the arduino
 
 ```
   myPort.write("a"+angleAmp1+"\n");
@@ -83,13 +127,13 @@ Faire de ces résultats des données exploitable par l'arduino
 
 ```
 
-### 2. Définir un angle sur lequel les servo pourront s'actionner 
+### 2. Define an angle on which the servo can operate
 
 ```
  int angleAmp1 = int(map(moyenneAmplitude1, 0, 2, 0, 90));
   int angleAmp2 = int(map(moyenneAmplitude2, 0, 1, 0, 90));
  ```
-### 3. Lier l'arduino à processing et inversement
+### 3. Link the arduino to processing and vice versa
 
 Processing : 
 
@@ -107,9 +151,9 @@ Processing :
     val = int(val);
   ```
 
-# Le montage
+# Mounting
 ![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/3.jpg)
 
-## Schéma Arduino
+## Schema Arduino
 ![](https://github.com/Mariejulie13/Imprimante-de-sons-/blob/master/assets/2_servo_bb.jpg)
 
